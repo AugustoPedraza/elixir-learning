@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  main:
+    build: .
+    command: 'bash'
+    volumes:
+      - .:/elixir-learning
+    working_dir: '/elixir-learning'
+
+
