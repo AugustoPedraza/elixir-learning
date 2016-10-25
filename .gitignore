@@ -4,4 +4,8 @@
 erl_crash.dump
 *.ez
 *.swp
+<<<<<<< 2460ad4d9b29d574f3760e1e9c83fa706a9baf45
+=======
+*.beam
+>>>>>>> updated gitignore and fixed module error
 
