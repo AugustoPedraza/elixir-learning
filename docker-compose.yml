@@ -1,11 +1,11 @@
 version: '2'
 
 services:
-  main:
+  iex:
     build: .
-    command: 'bash'
+    command: 'iex'
     volumes:
-      - .:/elixir-learning
+      - .:/home/elixir-learning
+      - /tmp/.X11-unix:/tmp/.X11-unix
     working_dir: '/elixir-learning'
-
 
