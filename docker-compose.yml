@@ -9,3 +9,9 @@ services:
       - /tmp/.X11-unix:/tmp/.X11-unix
     working_dir: '/elixir-learning'
 
+  exercism:
+    build: ./exercism
+    volumes:
+      - ./exercism:/home/exercism
+    working_dir: '/exercism'
+
