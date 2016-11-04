@@ -7,6 +7,8 @@ services:
     volumes:
       - .:/home/elixir-learning
       - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      - DISPLAY=$DISPLAY
     working_dir: '/home/elixir-learning'
 
   exercism:
