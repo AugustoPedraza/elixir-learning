@@ -7,7 +7,7 @@ services:
     volumes:
       - .:/home/elixir-learning
       - /tmp/.X11-unix:/tmp/.X11-unix
-    working_dir: '/elixir-learning'
+    working_dir: '/home/elixir-learning'
 
   exercism:
     build: ./exercism
