@@ -2,19 +2,11 @@ defmodule StructDrop do
   import :math, only: [sqrt: 1]
 
   def fall_velocity(%Tower{planemo: n, height: d}) do
-    fall_velocity n, d
+    Map.get(%{earth: 9.8, moon: 1.6, mars: 3.71}, n) |> fall_velocity(d)
   end
 
-  defp fall_velocity(:earth, distance) when distance >= 0 do
-    2 * distance * 9.8 |> sqrt
-  end
-
-  defp fall_velocity(:moon, distance) when distance >= 0 do
-    2 * distance * 1.6 |> sqrt
-  end
-
-  defp fall_velocity(:mars, distance) when distance >= 0 do
-    2 * distance * 3.71 |> sqrt
+  defp fall_velocity(gravity, distance) when distance >= 0 do
+    2 * distance * gravity |> sqrt
   end
 end
 
